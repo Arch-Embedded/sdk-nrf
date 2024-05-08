@@ -260,4 +260,8 @@ endif()
 if (NOT BUILD_INSIDE_TFM)
   # Add zephyr-specific code
   add_subdirectory(zephyr)
+  set_property(SOURCE ${ARM_MBEDTLS_PATH}/library/bignum.c APPEND PROPERTY COMPILE_OPTIONS "${OPTIMIZE_FOR_SPEED_FLAG}")
+  set_property(SOURCE ${ARM_MBEDTLS_PATH}/library/bignum_mod.c APPEND PROPERTY COMPILE_OPTIONS "${OPTIMIZE_FOR_SPEED_FLAG}")
+  set_property(SOURCE ${ARM_MBEDTLS_PATH}/library/bignum_ctrl.c APPEND PROPERTY COMPILE_OPTIONS "${OPTIMIZE_FOR_SPEED_FLAG}")
 endif()
+ 
