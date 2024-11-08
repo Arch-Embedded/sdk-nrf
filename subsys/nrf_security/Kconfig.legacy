@@ -117,42 +117,42 @@ config MBEDTLS_DHM_ALT
 config MBEDTLS_ECP_ALT
 	bool
 	depends on CC3XX_BACKEND || PSA_CRYPTO_DRIVER_CC3XX
-	default y
+	default n
 
 config MBEDTLS_ECDH_GEN_PUBLIC_ALT
 	bool
 	depends on OBERON_BACKEND || PSA_CRYPTO_DRIVER_OBERON || \
 		   CC3XX_BACKEND || PSA_CRYPTO_DRIVER_CC3XX
-	default y
+	default n
 
 config MBEDTLS_ECDH_COMPUTE_SHARED_ALT
 	bool
 	depends on OBERON_BACKEND || PSA_CRYPTO_DRIVER_OBERON || \
 		   CC3XX_BACKEND || PSA_CRYPTO_DRIVER_CC3XX
-	default y
+	default n
 
 config MBEDTLS_ECDSA_GENKEY_ALT
 	bool
 	depends on OBERON_BACKEND || PSA_CRYPTO_DRIVER_OBERON || \
 		   CC3XX_BACKEND || PSA_CRYPTO_DRIVER_CC3XX
-	default y
+	default n
 
 config MBEDTLS_ECDSA_SIGN_ALT
 	bool
 	depends on OBERON_BACKEND || PSA_CRYPTO_DRIVER_OBERON || \
 		   CC3XX_BACKEND || PSA_CRYPTO_DRIVER_CC3XX
-	default y
+	default n
 
 config MBEDTLS_ECDSA_VERIFY_ALT
 	bool
 	depends on OBERON_BACKEND || PSA_CRYPTO_DRIVER_OBERON || \
 		   CC3XX_BACKEND || PSA_CRYPTO_DRIVER_CC3XX
-	default y
+	default n
 
 config MBEDTLS_ECJPAKE_ALT
 	bool
 	depends on OBERON_ONLY_ENABLED
-	default y
+	default n
 
 config MBEDTLS_RSA_ALT
 	bool
@@ -787,7 +787,7 @@ config MBEDTLS_PK_PARSE_C
 config MBEDTLS_PK_PARSE_EC_EXTENDED
 	bool
 	prompt "Enhance support for reading EC keys"
-	default y
+	default n
 	depends on MBEDTLS_PK_PARSE_C
 
 endmenu # Legacy mbed TLS crypto APIs
